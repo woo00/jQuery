@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test </title>
+<link type="text/css" rel="stylesheet" href="/www/css/w3.css">
+<link type="text/css" rel="stylesheet" href="/www/css/smart.css">
+<script type="text/javascript" src="/www/js/jquery-3.6.1.min.js"></script>
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.w3-button').click(function(){
+			var txt = $('#id').val(); // id가 'id'인 태그를 선택해서 잆력된 값을 읽어서 변수 txt에 기억시키기
+			if(!txt){
+				$('#id').val('입력하세요!')
+				$('#id').focus();
+				retrun;
+			}
+			$('.w3-content').append('<h1>' + txt + '</h1>');
+			$('.w3-content').children().last().addClass('w3-col w3-padding w3-margin-top teal6');
+		});
+		$('h1').click(function(){
+			var txt = $(this).html(); // html() == innerHTML, text() == innerText
+			if(!txt){
+				alert('읽은 데이터가 없습니다.');
+				return;
+			}
+			
+			$('.w3-content').append('<h3>' + txt + '</h3>');
+			var el = $('.w3-content').children().last();
+			el.addClass('w3-col w3-padding w3-margin-top teal4');
+			el.html('읽은 데이터 : ' + txt);
+		});
+	});
+</script>
+</head>
+<body>
+	<div class="w3-content mxw700 w3-center">
+		<h1 class="teal1 w3-padding w3-card-4 w3-margin-bottom">jQuery Test</h1>
+		<div class="w3-col w3-card-4 w3-padding">
+			<div>
+				<label for="id"class="w3-col m2 w3-right-align">I D : </label>
+				<div class="w3-col m9 pdl10">
+					<input type="text" name="id" id="id" class="w3-col w3-border">
+				</div>
+			</div>
+			<div class="w3-margin-top">
+				<div class="w3-button w3-col w3-margin-top teal2">click</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

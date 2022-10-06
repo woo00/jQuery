@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery 1st Page</title>
+<link type="text/css" rel="stylesheet" href="/www/css/w3.css">
+<link type="text/css" rel="stylesheet" href="/www/css/smart.css">
+<script type="text/javascript" src="/www/js/jquery-3.6.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('body').append('<div class="w3-content mxw700 w3-center"></div>');
+		for(i = 0 ; i < 3 ; i++){
+		$('.w3-content').append('<h1 class="w3-padding w3-card-4 teal">' + (i + 1) + ' ] jQuery 만세~~</h1>');
+		// 1 ] jQuery 만세!!!
+		// 2 ] jQuery 만세!!!
+		}
+			$('h1').last().css('display', 'none');
+		
+		$('h1').eq(1).click(function(){
+			$('h1').last().slideToggle();
+		});
+	});
+</script>
+</head>
+<body>
+
+</body>
+</html>

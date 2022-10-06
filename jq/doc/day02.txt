@@ -1,0 +1,28 @@
+# day02
+
+SVN Repository URL : 
+	http://192.168.0.131:81/repo/jq
+		id : classB
+		pw : 12345
+		
+		
+jQuery 사용방법
+
+0. 형식 ]
+			jQuery(document).ready(function(){
+				코드작성 부분
+			});
+
+1. 형식 1 ]
+			$(document).ready(function(){
+				실행내용
+				
+				일반적인 jQuery 스크립트들이 작성되는 부분...
+			});
+			
+			
+2. 형식 2 ]
+			$(function()
+				
+			});			
+			

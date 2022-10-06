@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test </title>
+<link type="text/css" rel="stylesheet" href="/www/css/w3.css">
+<link type="text/css" rel="stylesheet" href="/www/css/smart.css">
+<script type="text/javascript" src="/www/js/jquery-3.6.1.min.js"></script>
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var el = $('.inblock').addClass("avtimg w3-border w3-card-2 glbl mgb10 viol5");
+		el.click(function(){
+			var txt = $(this).html();
+			switch(txt){
+			case 'div1' : 
+				location.href = 'https://www.naver.com/';
+			break;
+			case 'div2' : 
+				location.href = 'https://www.google.com/';
+			break;
+			case 'div3' : 
+				location.href = 'https://www.kakao.com/';
+			break;
+			case 'div4' : 
+				location.href = 'https://githrd.cafe24.com/';
+			break;
+			case 'div5' : 
+				location.href = 'http://localhost/www/';
+			break;
+			}
+		});
+	});
+</script>
+</head>
+<body>
+	<div class="w3-content mxw700 w3-center">
+		<h1 class="w3-padding w3-margin-bottom w3-col w3-card-4 viol2">속성 일괄적용</h1>
+		<div class="w3-col">
+			<div class="inblock">div1</div>
+			<div class="inblock">div2</div>
+			<div class="inblock">div3</div>
+			<div class="inblock">div4</div>
+			<div class="inblock">div5</div>
+		</div>
+	</div>
+</body>
+</html>

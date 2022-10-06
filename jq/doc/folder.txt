@@ -1,0 +1,15 @@
+tomcat 폴더 구조
+
+bin	- 톰캣의 실행파일들이 모여있는 폴더
+conf	- 톰캣의 설정파일들이 모여있는 폴더
+lib	- 라이브러리
+logs
+temp
+webapps	- 실재 서비스되는 프로젝트가 올려지는 폴더
+work
+
+
+
+http://naver.me/x4iViS4r
+
+비밀번호 : jennie
