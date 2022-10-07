@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test </title>
+<link type="text/css" rel="stylesheet" href="/www/css/w3.css">
+<link type="text/css" rel="stylesheet" href="/www/css/smart.css">
+<script type="text/javascript" src="/www/js/jquery-3.6.1.min.js"></script>
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.w3-content').contents().css('background-color','lightgray');
+		
+		$('h1:contains("콘텐츠 탐색 선택자")').next().html();
+
+		$('h1').eq(2).html('2nd Contents');
+		
+		$('h1:contains("콘텐츠 탐색 선택자")').next().next().addClass('w3-padding blu3');
+		
+		//두번째 h1태그를 선택한 후 그 태그를 기준으로 첫번째 h1을 선택하세요
+		var txt = $('h1:contains("첫번째 콘텐츠")').parent().prev().html();
+		
+// 		txt = $('div:has("h2") > h2').text();
+// 		txt = $('div').children.has('h2').html();
+// 		txt = $('div').filter('.w3-margin-top').html();
+// 		txt = $('div').find('h2').html();
+// 		txt = $('h2').closest('div').prev().html();
+		var txt1 = $('div').children('h2').end().html();
+		txt = $('div').html();
+		
+		$('#d1').text(txt1);
+		$('#d2').text(txt);
+// 		alert('txt : ' + txt);
+	});
+</script>
+</head>
+<body>
+	<div class="w3-content mxw700 w3-center">
+		<h1 class="red1 w3-padding w3-card-4">콘텐츠 탐색 선택자</h1>
+		<div class="w3-margin-top">
+			<h1 class="w3-padding blu">첫번째 콘텐츠</h1>
+			<h1 class="w3-padding blu1">두번째 콘텐츠</h1>
+			<h2 class="w3-padding blu2">세번째 콘텐츠</h2>
+		</div>
+		<div id="d1">div</div>
+		<div id="d2">div</div>
+	</div>
+</body>
+</html>

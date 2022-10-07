@@ -99,6 +99,10 @@
 
 /*배경색 관련*/
 .bw {background-color: burlywood;}
-.tan {background-color: tan; color : white;}.tan1 {background-color: #dac09f; color : white;}.tan2 {background-color: #e2ccb1; color : white;}.tan3 {background-color: #ead9c4; color : white;}.tan4 {background-color: #f1e5d8;}.tan5 {background-color: #f8f2eb;}
+.red{background-color: #f44e59; color : white;} .red1{background-color: #fb7172; color : white;} .red2{background-color: #ff8f8d; color : white;} .red3{background-color: #ffaca8; color : white;} .red4{background-color: #ffc8c4;} .red5{background-color: #ffe3e1;}
+.org{background-color: #feb863; color : white;} .org1{background-color: #ffc47d; color : white;} .org2{background-color: #ffcf97; color : white;} .org3{background-color: #ffdbb1; color : white;} .org4{background-color: #ffe7ca;} .org5{background-color: #fff3e5;}
+.yel{background-color: #fcd856; color : white;} .yel1{background-color: #ffde75; color : white;} .yel2{background-color: #ffe591; color : white;} .yel3{background-color: #ffebad; color : white;} .yel4{background-color: #fff2c8;} .yel5{background-color: #fff8e3;}
+.blu{background-color: #2196f3; color : white;} .blu1{background-color: #63a6f5; color : white;} .blu2{background-color: #89b7f8; color : white;} .blu3{background-color: #aac9fa!important; color : white;} .blu4{background-color: #c8dafc;} .blu5{background-color: #e4edfe;} 
+.tan{background-color: tan; color : white;}.tan1{background-color: #dac09f; color : white;}.tan2 {background-color: #e2ccb1; color : white;}.tan3 {background-color: #ead9c4; color : white;}.tan4 {background-color: #f1e5d8;}.tan5 {background-color: #f8f2eb;}
 .viol{background-color: #8a5fb8; color : white;} .viol1{background-color: #9e79c4; color : white;} .viol2{background-color: #b293d0; color : white;} .viol3{background-color: #c6addc; color : white;} .viol4{background-color: #d9c8e8;} .viol5{background-color: #ece3f3;} 
 .teal{background-color: teal; color : white;} .teal1{background-color: #469594; color : white;} .teal2{background-color: #6ea9a8; color : white;} .teal3{background-color: #93bebd; color : white;} .teal4{background-color: #b7d4d3;} .teal5{background-color: #dbe9e9;} 

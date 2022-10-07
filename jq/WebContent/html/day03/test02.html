@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test </title>
+<link type="text/css" rel="stylesheet" href="/www/css/w3.css">
+<link type="text/css" rel="stylesheet" href="/www/css/smart.css">
+<script type="text/javascript" src="/www/js/jquery-3.6.1.min.js"></script>
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var tag = '<h1 class="teal w3-padding w3-card-4">TITLE</h1>'
+		$('.w3-content').attr('class', 'w3-content mxw700 w3-center').append(tag);
+		
+		var txt = $('.w3-content').append('<div>').children().last().html('Last').html();
+		alert(txt);
+// 		$('.w3-content > div').append('<h1>');
+	});
+	
+	/*
+		JSP 의 EL(Expression Language)의 형식
+			
+			: ${변수}
+	*/
+</script>
+</head>
+<body>
+	<div class="w3-content">
+		<!-- prepend 위치 -->
+		<a>
+		</a>
+		<p></p>
+		<!-- append 위치 -->
+	</div>
+</body>
+</html>

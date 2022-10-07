@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test </title>
+<link type="text/css" rel="stylesheet" href="/www/css/w3.css">
+<link type="text/css" rel="stylesheet" href="/www/css/smart.css">
+<script type="text/javascript" src="/www/js/jquery-3.6.1.min.js"></script>
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+/*	
+	var m =$.noConflict();
+	
+	m(document).ready(function(){
+		m('#d1').html('div tag');
+	});
+*/
+
+	$(document).ready(function(){
+		$('#d1').html('div Tag').attr('class', 'w3-center');
+	});
+	
+	$(document).ready(function(){
+		var el = $('div');
+		el.get(1).innerHTML = '두번째 div tag';
+		alert(el.get(0).innerHTML);
+	});
+</script>
+</head>
+<body>
+	<div class="d1" id="d1"></div>
+	<div class="d1"></div>
+</body>
+</html>

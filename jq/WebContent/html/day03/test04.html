@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test </title>
+<link type="text/css" rel="stylesheet" href="/www/css/w3.css">
+<link type="text/css" rel="stylesheet" href="/www/css/smart.css">
+<script type="text/javascript" src="/www/js/jquery-3.6.1.min.js"></script>
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+/*
+	var blackpink = ['제니','리사','로제','지수'];
+	
+	function printMember(data, index){
+		document.write(data + ' : ' + index + '<br>');
+	};
+	blackpink.forEach(printMember);
+*/
+	var blackPink = ['제니','리사','로제','지수'];
+	var blackpink = ['jennie','lisa','rose','jisoo'];
+
+	$(document).ready(function(){
+		alert($('h3').eq(3).html());
+		/*
+			여러개의 태그를 선택한 후 태그의 내용을 확인하면 
+			첫 번째 태그만 보여주게된다.
+			각각의 내용을 보려면
+			반복처리할 필요가 생긴다.
+		*/
+		/*
+			each()
+			$(선택자).each(function(매개변수1, 매개변수2){
+				처리내용...
+			});
+		
+			$.each(태그선택, 실행함수)
+			
+			==> 
+		*/
+// 		$.each($('h3'), function(index, data){
+// 			var txt = $(data).html(); // 작성된 테이터 읽어오는 작업
+// 			$(data).html(txt + ' : ' + index + '. ' + blackpink[index]); // 새로운데이터로 교체하는 작업
+// 		});
+		$('h3').each(function(index, data){
+			var txt = $(data).html(); // 작성된 테이터 읽어오는 작업
+			var txt1 = data.innerHTML;
+			
+			$(data).html(txt1 + ' : ' + index + '. ' + blackpink[index]); // 새로운데이터로 교체하는 작업
+		});
+	});
+</script>
+</head>
+<body>
+	<div class="w3-content mxw700 w3-center">
+		<h1 class="blu w3-padding w3-card-2">jQuery Selector</h1>
+		<div id="d1">
+			<h3 class="blu2 w3-col m3">1. 제니</h3>
+			<h3 class="blu2 w3-col m3">2. 리사</h3>
+			<h3 class="blu2 w3-col m3">3. 로제</h3>
+			<h3 class="blu2 w3-col m3">4. 지수</h3>
+		</div>
+	</div>
+</body>
+</html>
