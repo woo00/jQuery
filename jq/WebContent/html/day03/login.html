@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>w3.css</title>
+<link type="text/css" rel="stylesheet" href="/www/css/w3.css">
+<link type="text/css" rel="stylesheet" href="/www/css/smart.css">
+<style type="text/css">
+	html, body {
+		height: 100%;
+	}
+</style>
+<script type="text/javascript" src="/www/js/jquery-3.6.1.min.js"></script>
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+		$('#hbtn').click(function(){
+			$(location).attr('href', '/www/')
+		});
+		$('#jbtn').click(function(){
+			alert('준비중입니다.');
+		});
+		$('#lbtn').click(function(){
+			//할일 
+			//데이터 유효성검사
+			var sid = $('#id').val();
+			if(!sid){
+				$('#id').focus();
+				return;
+			}
+			var spw = $('#pw').val();
+			if(!spw){
+				$('#pw').focus();
+				return;
+			}
+			//정규표현식 검사
+			var pattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@!_.#+])[a-zA-Z0-9@!_.#+]{5,10}$/;
+			
+			if(!pattern.test(sid)){
+				$('#id').val('').focus();
+				alert('아이디 형식이 잘 못 입력되었습니다.');
+				return;
+			}
+			//서버에 전송
+// 			$('#frm').submit();
+			$(document.frm).submit();
+		});
+	});
+</script>
+</head>
+<body>
+	<div class="w3-display-container" style="height: 100%;">
+	<div class="w3-display-middle mxw750">
+		<h1 class="w3-padding red3 w3-center w3-card-4 w3-round-large mgb20">Smart Login</h1>
+		
+		
+		<form method="get" action="result.html" id="frm" name="frm" class="w3-col w3-card-4 mgb20 pdh30 w3-round-large">
+			<div class="w3-col mgb15">
+				<div class="w3-col m3 w3-right-align pdr10 ft18 bd w3-text-gray">
+					<label for="id" >I D : </label>
+				</div>
+				<div class="w3-col m5">
+					<input type="text" name="id" id="id" class="w3-col w3-input w3-border w3-round-large mgr15"
+							placeholder="메일 형식으로 입력하세요.">
+				</div>
+				<div class="w3-col m1"><p/></div>
+				<div class="w3-rest w3-light-gray w3-hover-gray w3-button w3-round-large">check</div>
+			</div>
+			<div class="w3-col mgb15">
+				<div class="w3-col m3 w3-right-align pdr10 ft18 bd w3-text-gray">
+					<label for="pw" >P W : </label>
+				</div>
+				<div class="w3-col m9">
+					<input type="password" name="pw" id="pw" class="w3-col m10 w3-input w3-border w3-round-large"
+							placeholder="비밀번호를 입력하세요.">
+				</div>
+			</div>
+		</form>
+		<div class="w3-col w3-card-4 w3-round-large hidden ">
+			<div class="w3-col w3-third red5 w3-hover-white w3-button" id="hbtn">home</div>
+			<div class="w3-col w3-third org4 w3-hover-white w3-button" id="jbtn">join</div>
+			<div class="w3-col w3-third yel4 w3-hover-white w3-button" id="lbtn">login</div>
+		</div>
+	</div>
+	</div>
+</body>
+</html>
